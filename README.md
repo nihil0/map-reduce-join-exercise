@@ -13,6 +13,8 @@ In Lesson 2 of the Introduction to Map/Reduce module the Join task was described
 
 Please read through all the instruction and if you are not a programmer, especially the programming notes. It is not a hard programming assignment, but I believe worth the effort to understand the nature of map/reduce framework.
 
+---
+
 
 Part 1
 =======
@@ -22,6 +24,7 @@ Part 1
 ```
 chmod +x join1_mapper.py && chmod +x join1_reducer.py
 ```
+
 
 **Step 2**: Test the program in serial execution my executing the fllowing command: 
 
@@ -67,5 +70,5 @@ hdfs dfs -put ~/map-reduce-join-exercise/join1_FileB.txt /user/cloudera/input/
 hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar -input /user/cloudera/input -output /user/cloudera/output_join  -mapper /home/cloudera/join1_mapper.py -reducer /home/cloudera/join1_reducer.py
 ```
 
-It should run successfully. 
+It should run successfully. You can check the output using HUE. It should be similar to that produced at the end of step 2. 
 
