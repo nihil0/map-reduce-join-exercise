@@ -6,6 +6,12 @@
 
 Since the formatting and exercise description is very poor, here is a detailed tutorial version of the exercise from [this](https://www.coursera.org/learn/hadoop/home/welcome) Coursera course with all files included. Just clone this into your **home folder** on the Cloudera Quickstart VM and you're all set!
 
+If you're not familiar with Git, here's the command
+
+```
+git clone git@github.com:nihil0/map-reduce-join-exercise.git
+```
+
 #### Exercise in Joining data with streaming using Python code:
 
 
