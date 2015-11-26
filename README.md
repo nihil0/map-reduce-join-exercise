@@ -4,7 +4,7 @@
 
 ### Assignment: Joining Data
 
-Since the formatting and exercise description is very poor, here is a detailed tutorial version of the exercise from [this](https://www.coursera.org/learn/hadoop/home/welcome) Coursera course with all files included. Just clone this into your home folder on the Cloudera Quickstart VM and you're all set!
+Since the formatting and exercise description is very poor, here is a detailed tutorial version of the exercise from [this](https://www.coursera.org/learn/hadoop/home/welcome) Coursera course with all files included. Just clone this into your **home folder** on the Cloudera Quickstart VM and you're all set!
 
 #### Exercise in Joining data with streaming using Python code:
 
@@ -29,7 +29,19 @@ chmod +x join1_mapper.py && chmod +x join1_reducer.py
 cat join1_File*.txt | ./join1_mapper.py | sort | ./join1_reducer.py
 ```
 
- Explanation: `cat join1_File*.txt` prints out the contents of the files `join1_FileA.txt` and `join1_FileB.txt` to the [Standard Output Stream](https://en.wikipedia.org/wiki/Standard_streams#Standard_output_.28stdout.29). The "pipe" operator `|` redirects the data to be written to the output stream to the script `join1_mapper.py`. The next pipe directs the output of `join1_mapper.py` to the built-in program `sort`, which sorts the lines of the output of `join1_mapper.py` in alphabetical order. The output of the `sort` program is then piped to `join1_reducer.py` which prints its output to the system's standard output. 
+ Explanation: `cat join1_File*.txt` prints out the contents of the files `join1_FileA.txt` and `join1_FileB.txt` to the [Standard Output Stream](https://en.wikipedia.org/wiki/Standard_streams#Standard_output_.28stdout.29). The "pipe" operator `|` redirects the data to be written to the output stream to the script `join1_mapper.py`. The next pipe directs the output of `join1_mapper.py` to the built-in program `sort`, which sorts the lines of the output of `join1_mapper.py` in alphabetical order. The output of the `sort` program is then piped to `join1_reducer.py` which prints its output to the system's standard output, which sould look like this: 
+ 
+ ```
+Apr-04 able 13 n-01 5
+Dec-15 able 100 n-01 5
+Feb-02 about 3 11
+Mar-03 about 8 11
+Feb-22 actor 3 22
+Feb-23 burger 5 15
+Mar-08 burger 2 15
+
+ ```
+
 
 **Step 3** : Run the following commands to put the data files `join1_FileA.txt` and `join1_FileB.txt` into the Hadoop Distributed File System. You can also do this graphically using HUE. 
 
@@ -54,3 +66,6 @@ hdfs dfs -put ~/map-reduce-join-exercise/join1_FileB.txt /user/cloudera/input/
 ```
 hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar -input /user/cloudera/input -output /user/cloudera/output_join  -mapper /home/cloudera/join1_mapper.py -reducer /home/cloudera/join1_reducer.py
 ```
+
+It should run successfully. 
+
