@@ -78,3 +78,10 @@ hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar -input /user/cloudera/
 
 It should run successfully. You can check the output using HUE. It should be similar to that produced at the end of step 2. 
 
+Part 2
+=======
+
+**Step 1** : Create the data files using `make_join2data.py` with different arguments. This is included in the shell script `make_data.sh` which can be run by invoking the command:
+```
+sh make_data.sh
+```
