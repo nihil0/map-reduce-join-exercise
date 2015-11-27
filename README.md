@@ -70,7 +70,7 @@ Now the second one
 hdfs dfs -put ~/map-reduce-join-exercise/join1_FileB.txt /user/cloudera/input/
 ```
 
-** Step 4** : Run the map-reduce job using the following command (on one line to prevent line-break issues):
+**Step 4** : Run the map-reduce job using the following command (on one line to prevent line-break issues):
 
 ```
 hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar -input /user/cloudera/input -output /user/cloudera/output_join  -mapper /home/cloudera/join1_mapper.py -reducer /home/cloudera/join1_reducer.py
