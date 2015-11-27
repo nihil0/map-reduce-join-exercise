@@ -9,7 +9,7 @@ Since the formatting and exercise description is very poor, here is a detailed t
 If you're not familiar with Git, here's the command
 
 ```
-git clone git@github.com:nihil0/map-reduce-join-exercise.git
+git clone https://github.com/nihil0/map-reduce-join-exercise.git
 ```
 
 #### Exercise in Joining data with streaming using Python code:
