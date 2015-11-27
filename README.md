@@ -9,7 +9,7 @@ Since the formatting and exercise description is very poor, here is a detailed t
 If you're not familiar with Git, here's the command
 
 ```
-git clone git@github.com:nihil0/map-reduce-join-exercise.git
+git clone https://github.com/nihil0/map-reduce-join-exercise.git
 ```
 
 #### Exercise in Joining data with streaming using Python code:
@@ -70,7 +70,7 @@ Now the second one
 hdfs dfs -put ~/map-reduce-join-exercise/join1_FileB.txt /user/cloudera/input/
 ```
 
-** Step 4** : Run the map-reduce job using the following command (on one line to prevent line-break issues):
+**Step 4** : Run the map-reduce job using the following command (on one line to prevent line-break issues):
 
 ```
 hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar -input /user/cloudera/input -output /user/cloudera/output_join  -mapper /home/cloudera/join1_mapper.py -reducer /home/cloudera/join1_reducer.py
@@ -78,3 +78,10 @@ hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar -input /user/cloudera/
 
 It should run successfully. You can check the output using HUE. It should be similar to that produced at the end of step 2. 
 
+Part 2
+=======
+
+**Step 1** : Create the data files using `make_join2data.py` with different arguments. This is included in the shell script `make_data.sh` which can be run by invoking the command:
+```
+sh make_data.sh
+```
